@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/saeure_hintergrund"
+    android:gravity="center|center_horizontal|left|top"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/Verduennen"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:minEms="6"
+                android:nextFocusDown="@+id/Zahl1_1"
+                android:nextFocusLeft="@+id/Substanzreinheit"
+                android:nextFocusRight="@+id/Zahl1_1"
+                android:nextFocusUp="@+id/Substanzreinheit"
+                android:onClick="btnClear"
+                android:text="@string/EingabeLoeschen" />
+
+            <Button
+                android:id="@+id/btnRechne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:minEms="6"
+                android:nextFocusDown="@+id/Zahl1_1"
+                android:nextFocusLeft="@+id/Substanzreinheit"
+                android:nextFocusRight="@+id/Zahl1_1"
+                android:nextFocusUp="@+id/Substanzreinheit"
+                android:onClick="btnRechneOnClickHandler"
+                android:text="@string/Berechnung" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Spinner
+                android:id="@+id/spinnerSL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/cSchwarz" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/MengeSL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="70dp"
+                android:ellipsize="start"
+                android:ems="10"
+                android:gravity="right|center_vertical"
+                android:hint="@string/Menge"
+                android:inputType="numberSigned|numberDecimal"
+                android:minEms="4"
+                android:nextFocusDown="@+id/KonzSL"
+                android:selectAllOnFocus="true"
+                android:textColor="@color/cHellblau"
+                android:textColorHint="@color/cHellblau" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/MengeSL"
+                android:layout_alignParentRight="true"
+                android:background="@color/cSchwarz" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@color/cGold"
+                android:minEms="6"
+                android:text="@string/Wasser"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cSchwarz" />
+
+            <EditText
+                android:id="@+id/MengeWasser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="70dp"
+                android:ellipsize="start"
+                android:ems="10"
+                android:gravity="right|center_vertical"
+                android:hint="@string/Menge"
+                android:inputType="numberSigned|numberDecimal"
+                android:minEms="4"
+                android:selectAllOnFocus="true"
+                android:textColor="@color/cHellblau"
+                android:textColorHint="@color/cHellblau" />
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:background="@color/cGold"
+                android:minEms="2"
+                android:text="@string/Milliliter"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cSchwarz" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@color/cGold"
+                android:minEms="6"
+                android:text="@string/Verduenn"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cSchwarz" />
+
+            <EditText
+                android:id="@+id/MengeVerduennung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="70dp"
+                android:ellipsize="start"
+                android:ems="10"
+                android:gravity="right|center_vertical"
+                android:hint="@string/Menge"
+                android:inputType="numberSigned|numberDecimal"
+                android:minEms="4"
+                android:selectAllOnFocus="true"
+                android:textColor="@color/cHellblau"
+                android:textColorHint="@color/cHellblau" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/MengeVerduennung"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/TextView04"
+                android:background="@color/cSchwarz" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/KonzVerduennung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="70dp"
+                android:ellipsize="start"
+                android:gravity="right|center_vertical"
+                android:hint="@string/Konzentration"
+                android:inputType="numberSigned|numberDecimal"
+                android:minEms="3"
+                android:nextFocusDown="@+id/VolWasser"
+                android:selectAllOnFocus="true"
+                android:textColor="@color/cHellblau"
+                android:textColorHint="@color/cHellblau"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/KonzVerduennung"
+                android:layout_alignParentRight="true"
+                android:background="@color/cSchwarz" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvErgebnis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:background="@color/cGold"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cSchwarz" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvErgebnis3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:background="@color/cGold"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cSchwarz" />
+        </RelativeLayout>
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/Copyright"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/cGold" />
+
+</LinearLayout>
